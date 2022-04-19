@@ -83,7 +83,7 @@ body {
 
 #home {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 2fr 60px auto;
     align-items: center;
     justify-items: end;
     gap: 30px;
@@ -113,9 +113,10 @@ body {
 }
 
 #actions {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: end;
+    gap: 20px;
 }
 
 #actions button {
@@ -158,7 +159,7 @@ body {
 }
 
 #projects {
-    padding: 0 32px;
+    padding: 0 32px 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50px auto;
@@ -187,6 +188,7 @@ body {
     padding: 50px;
     display: flex;
     flex-direction: column;
+    border-radius: 15px;
 }
 
 #projects .card .action {
@@ -202,4 +204,38 @@ body {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 5px;
+}
+
+#announcements {
+    display: grid;
+    padding: 32px;
+    gap: 24px;
+}
+
+#announcements > div {
+    background-color: var(--main-color);
+    box-shadow: 1px 1px 4px rgb(141, 141, 141);
+    border-radius: 15px;
+}
+
+#announcements h3 {
+    align-self: end;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.announce {
+    padding: 24px;
+}
+
+.announce p:first-of-type {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.announce p:last-of-type {
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 16px;
 }
